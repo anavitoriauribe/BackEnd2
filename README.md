@@ -95,10 +95,10 @@ graph TD
 ## Tipos de Requisição HTTP
 Os tipos de requisição HTTP indicam uma ação que o usuário deseja executar no servidor. As principais ações são: 
 
--**GET**: Pede dados de um lugar especifico. "Não Faz Alterações no Servidor"
+- **GET**: Pede dados de um lugar especifico. "Não Faz Alterações no Servidor"
 - **POST:** Envia dados novos para *criar* algo ou processar informações.
--**PUT/PATCH:**Modificar dados ja existentes. *PUT* Atualização Total dos dados. *PATCH* Atualização Parcial dos dados.
--**DELETE:**Apaga um dado do Servidor
+- **PUT/PATCH:** Modificar dados ja existentes. *PUT* Atualização Total dos dados. *PATCH* Atualização Parcial dos dados.
+- **DELETE:** Apaga um dado do Servidor
 
 
 
@@ -114,14 +114,14 @@ Os tipos de requisição HTTP indicam uma ação que o usuário deseja executar 
 
 - Fazer o Download do PHP (php.net);
 - ZIP - Non Thread Safe 8.5
-- Descompactar o arquivo do PHp na pasta C:\src\php (Para descompactar, usar  7zip)
+- Descompactar o arquivo do PHp na pasta C:\src\php (Para descompactar, usar 7zip)
 - Modificar o arquivo php.ini-development para => php.ini (criar as configurações do PHP na máquina) - adicionar ou remover funcionalidades do PHP
 - Adicionar a pasta do PHP (C:\src\php) as Variaveis de Ambiente do Sitema (PATH) 
 - Verificar a instalação rodando o comando php --version
 
 ##### Contextualizando o PHP
 
-O PHP de fato é uma das linguagens de programação masi populares da atualidade. Ela permite que você crie aplicações web robustas, muito simplificada direto ao ponto. Sem contar que a linguagem traz diversos recursos que failitam e acelaram o processo de desenvolvimento de sites e sistemas para web. E além do mais, ela ainda tem um ótimo ecossistema, uma excelente comunidade e um grande mercado de trabalho.
+O PHP de fato é uma das linguagens de programação mais populares da atualidade. Ela permite que você crie aplicações web robustas, muito simplificada direto ao ponto. Sem contar que a linguagem traz diversos recursos que facilitam e aceleram o processo de desenvolvimento de sites e sistemas para web. E além do mais, ela ainda tem um ótimo ecossistema, uma excelente comunidade e um grande mercado de trabalho.
 
 ##### Criando minha primeira aplicação em PHP
 
@@ -135,3 +135,65 @@ Criando um Hello, World!!!
 - PHP Debug (Xdebug): Acha erros em linha de código
 - PHP CS FIXER: Formatação padrão do código (identação)
 - PHP Serve: Sobe um serivdor local para acompanhamento em tempo real
+---
+##### Estudo de variáveis e constantes em PHP
+
+Declarar variáveis é alocar um espaço na emoria que permite a inclusão e manipulação de dados.
+
+**Variáveis**
+- devem ser declaradas usando "$" antes do nome da variável
+- podem ser string, numerica (integer, float), booleanas e nulas. não permite declaração de undefined
+- são nao tipadas, ou seja, não precisa declarar o tipo na declaração, a tipagem é atribuída ao adicionar o valor
+- usar o "declare(strict_types=1);" na primeira linha do arquivo ; => blindar o sistema contra conflitos de tipos de variáveis.
+
+**Constantes**
+
+- não podem ser modfificadas ou redeclaradas após a criação
+- pode ser criada usando "const" ou "define"
+- não permitem interpolação
+
+##### Estudos de operadores
+
+ **Aritméticos**:são usados para realizar cálculos
+ 
+ | operadores | nome | exemplo | resultado |
+ | - | - | - | - |
+ | + | adição | 10 + 5 | 15 |
+ | - | subtraão | 10 - 5 | 5 |
+ | * | multiplicação | 10 *5 | 50 |
+ | / | divisão | 10 / 5 | 2 |
+ | % | módulo (resto) | 10 % 3 | 1 (10 div 3 da 3, sobra 1) |
+ | ** | expoente | 2 ** 3 | 8 (2 elevado a 3) |
+
+ obs: O Operador % é o melhro amigo de um programador, permite ordenas listas e organizar fila e pilhas
+ 
+ ---
+
+ **Relacionais**: são usados para comparar dois ou mais valores, tendo sempre uma booleana (true or false) como resultado
+
+ | operadores | nome | exemplo | resultado |
+ | - | - | - | - |
+ | == | igual a | "10"==10 | true |
+ | === | igualdade estrita | "10"==10 | false |
+ | > | maior que | 18 > 18 | false |
+ | < | menor que | 10 < 15 | false |
+ | >= | igual ou maior | 18 >= 18 | true |
+ | <= | igual ou menor | 10 <= 5 | false |
+ | != | diferente | "10"!=10 | false |
+ | !== | diferença estrita | "10"!=10 | true |
+
+ ---
+
+ **Lógicos**Permite a Combinação entre sentenças.
+
+- Operador AND (E) => && : para o resultado se verdaddeiro, TODAS as Combinações precisam ser verdadeiras
+    - true && true => true
+    - true && false => false
+
+- Operador OR (OU) => || : para o resultado ser verdadeiro , Basta APENAS UMA condição ser verdadeira
+    - false || true => true
+    - false || false => false
+
+- Operador NOT (Não) => ! : Inverte a lógica da Sentença
+    - !true => false
+    - !false => true

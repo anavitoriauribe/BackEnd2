@@ -404,4 +404,4 @@ do{
 } while (tentativa != $numeroSecreto);
 
 ```
-obs: Uso ideal do `do-while`: menus de sistema ou sistemas de dados, sistemas interativos;
+obs: Uso ideal do `do-while`: menus de sistema ou sistemas de dados, sistemas interativos.

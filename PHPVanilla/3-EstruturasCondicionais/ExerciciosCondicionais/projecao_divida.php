@@ -1,9 +1,17 @@
 <?php 
 declare(strict_types=1);
+// Desafio FinanSENAI
+// 
+// Regra do Negocio:
+// Classificação de Risco
+// Projeção da Divida
+// Regra da Anistia 
+
 
 $dividaAtual = 1000.00;//variavel para divida atual
 $categoriaCliente = 'B';//variavel para qual categoria o cliente se encaixa
 
+//RF01 - Dterminar o juros de acordo com a classificação de risco:
 $taxaJuros = match ($categoriaCliente) { // match usado para "traduzir" a cetegoria do cliente à uma porcentagem
     'A' => 0.01,// categoria A => 1%
     'B' => 0.02,// categoria B => 2%
@@ -20,7 +28,7 @@ echo '<!DOCTYPE html>
       <style>
         body { font-family: Arial, sans-serif; margin: 30px; }
         table { width: 100%; border-collapse: collapse; }
-        th, td { border: 1px solid #000; padding: 10px; text-align: left; }
+        th, td { border: 1px solid #053692; padding: 10px; text-align: left; }
         th { background-color: #f2f2f2; }
     </style>
 </head>
@@ -40,6 +48,7 @@ echo '<!DOCTYPE html>
         </thead>
         <tbody>'; // <tbody> e <thead> são paa o corpo e titulo da tabela (table body, table head), diferente de <body> e < head> que são para a pagina inteira
 
+//RF02 - Projeção da dívida : calcular o juros ao longo de 12 meses:
 for ($mes = 1; $mes <= 12; $mes ++ ){ // o mês q se incia é o 1; ele conta até o 12, e o 12; ele adiciona de 1 em 1
    if ($mes == 6) { // aqui é uma exceção do for, onde, se for o mês 6, ele não faz o calculo igual aos outros
 

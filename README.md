@@ -793,4 +793,50 @@ exibe com mais detalhes as informações de um array ou variável em PHP
 echo var_dump($frutas);
 //Mostra Tudo: tipo de dados, o tamanho e o valor
 ```
+--- 
 
+### Semana 6 - Processamento HTTP e Formulario Web
+
+#### Anatomia de um formulário HTML para BackEnd
+
+antes de PHP processar qualquer informaçã, precisamos coletar infomações do FrontEnd através de um `<form>
+
+** Exemplo de `<form>`HTML 
+
+``` html
+<form action="procesa.php" methood="POST">
+    <label>nome completo </label>
+    <input type="text" id="campoNome" name="nomeUsuario" placeholder="Digite seu nome">
+    <button type="submit">Cadastrar</button>
+</form>>
+```
+
+**Os 3 pilares do formulário:**
+1. action="procesa.php" -> O destino: defne qual script PHP no servidor recebeá os dados.
+2. methood="POST" -> O Transporte: Define a vida de protoolo HTTP usada (GET ou POST).
+3. name="nomeUsuarios" -> A Etiqueta do Dado: É o nome da chave que o PHP usará no array associativo ($POST["nomeUsuario"]).
+
+> obs: Nunca Confundir `id` com `name` no input, o PHP ignora o `id`
+
+#### O Protocolo HTTP
+
+Quando o Usuário clica no botão `type="submit"`, o navegador compila todas as informações dos campos preenchidos e dispara um pacote de comunicação padronizado pelo **Protocolo HTTP(Hypertext Transfer Potocol)**
+
+**O Formato de transferência**
+
+-**Método GET**: solicitar infromações públicas e realizar buscas, mas altamente arriscada para dados privados;
+
+-**Método POST**: As informações viajam guardadas dentro do protocolo
+
+#### Testar o uso dos Protocolos HTTP
+ 
+OK
+
+#### GET vs. POST   
+
+1. O método `GET`é utilizado quando a intenção do cliente é **buscar ou filtar dados** sem alterar o estado do serviddor. Os dados enviados via `GET`são anexados diretamente ao final da URL na forma de uma **Query String**
+
+2. O método `POST`é utilizado quando o formulário envia dados que devem ser processados para **criar ou modificar** no sistema (ex: cadastro de usuários, finalizações de compras, upload de arquivos)
+
+
+#### Como os Métodos Funcionam no PHP (`$_GET`, `$_POST`, `$_SERVER`) - As SuperGlobais

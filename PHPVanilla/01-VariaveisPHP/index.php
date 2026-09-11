@@ -7,7 +7,7 @@ declare(strict_types=1);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudo de variáveis</title>
-</head>
+    
 <body>
      <h1>Estudo de Variáveis</h1>
     <hr>

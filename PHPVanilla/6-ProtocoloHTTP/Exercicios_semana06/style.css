@@ -1,0 +1,33 @@
+/* Estilo geral da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-family: sans-serif;
+}
+
+/* Cabeçalho Roxo */
+th {
+    background-color: #a03c8a; 
+    color: white;
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Células e linhas */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+
+td:last-child {
+    border-right: none;
+}
+
+/* Título */
+h2 {
+    color: #a03c8a;
+    font-family: sans-serif;
+}

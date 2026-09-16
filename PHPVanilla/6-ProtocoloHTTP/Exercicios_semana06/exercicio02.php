@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         <?php endif; ?>
 
-        <form action="ex02_calculadora_imc.php" method="POST" novalidate>
+        <form action="exercicio02.php" method="POST" novalidate>
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" value="<?= htmlspecialchars($nome) ?>">
             <?php if (isset($erro['nome'])): ?><span class="erro"><?= $erro['nome'] ?></span><?php endif; ?>

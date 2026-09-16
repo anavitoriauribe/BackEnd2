@@ -99,7 +99,7 @@ if ($buscaProduto !== "" || $precoMaximoTexto !== "") {
         <section>
             <p>Os filtros serão enviados pela URL (GET)</p>
 
-            <form action="index.php" method="GET">
+            <form action="exercicio01.php" method="GET">
         <label for="produto">Nome do produto</label>
         <input type="text" name="produto" id="produto" placeholder="Escreva o nome de um produto">
 

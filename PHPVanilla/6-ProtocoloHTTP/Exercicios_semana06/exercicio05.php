@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         <?php endif; ?>
 
-        <form action="ex05_inscricao.php" method="POST" novalidate>
+        <form action="exercicio05.php" method="POST" novalidate>
             <label for="nome_candidato">Nome do Candidato:</label>
             <input type="text" id="nome_candidato" name="nome_candidato" value="<?= htmlspecialchars($nomeCandidato) ?>">
             <?php if (isset($erro['nome_candidato'])): ?>

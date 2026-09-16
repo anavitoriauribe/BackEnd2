@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Cálculo das parcelas com taxa de juros simples de 1.5% ao mês
-    if (empty($erro)) {
+    if (empty($erro)) { //Se não existir erros então faça
         $saldoFinanciado = $valorVeiculo - $valorEntrada;
         $totalJuros = $saldoFinanciado * 0.015 * $numeroParcelas;
         $valorTotal = $saldoFinanciado + $totalJuros;
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <h1>Ex 04: Simulador de Financiamento (POST)</h1>
 
-        <form action="ex04_financiamento.php" method="POST" novalidate>
+        <form action="exercicio04.php" method="POST" novalidate>
             <label for="valor_veiculo">Valor do Veículo (R$):</label>
             <input type="text" id="valor_veiculo" name="valor_veiculo" value="<?= htmlspecialchars($valorVeiculoTexto) ?>">
             <?php if (isset($erro['valor_veiculo'])): ?><span class="erro"><?= $erro['valor_veiculo'] ?></span><?php endif; ?>

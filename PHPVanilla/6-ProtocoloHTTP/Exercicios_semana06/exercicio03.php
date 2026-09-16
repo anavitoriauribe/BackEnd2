@@ -61,9 +61,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p class="erro" style="font-weight: bold;"><?= $erro['login'] ?></p>
             <?php endif; ?>
 
-            <form action="ex03_login_seguro.php" method="POST" novalidate>
+            <form action="exercicio03.php" method="POST" novalidate>
                 <label for="email">E-mail:</label>
-                <!-- Sticky Form mantido no campo e-mail -->
+          
                 <input type="email" id="email" name="email" value="<?= htmlspecialchars($email) ?>">
                 <?php if (isset($erro['email'])): ?><span class="erro"><?= $erro['email'] ?></span><?php endif; ?>
 

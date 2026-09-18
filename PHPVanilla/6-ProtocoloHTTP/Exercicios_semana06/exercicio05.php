@@ -13,7 +13,7 @@ $cursoDesejado = trim((string)($_POST['curso_desejado'] ?? ''));
 $aceiteTermos = isset($_POST['aceite_termos']);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (strlen($nomeCandidato) < 5) {
+    if (strlen(trim($nomeCandidato)) < 5) {
         $erro['nome_candidato'] = "O nome deve conter pelo menos 5 caracteres.";
     }
 

@@ -99,5 +99,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p><strong>Valor por Parcela (<?= $resultado['qtd_parcelas'] ?>x):</strong> R$ <?= $resultado['parcela'] ?></p>
         <?php endif; ?>
     </main>
+    <div></div>
 </body>
 </html>

@@ -1,0 +1,14 @@
+[
+    {
+        "nome": "Felipe",
+        "mensagem": "text text text"
+    },
+    {
+        "nome": "Ana",
+        "mensagem": "ok ok ok"
+    },
+    {
+        "nome": "Debora",
+        "mensagem": "<script>alert('Mural Invadido')<\/script>"
+    }
+]

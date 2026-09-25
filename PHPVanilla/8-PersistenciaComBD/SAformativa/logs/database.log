@@ -1,0 +1,5 @@
+[2026-09-25 19:44:27] ERRO: Erro Geral: Arquivo de configuração não encontrado em : C:\Users\1dev46bt1\Documents\AnaUribe\BackEnd\PHPVanilla\8-PersistenciaComBD\SAformativa/config/databs.ini
+[2026-09-25 19:44:53] ERRO: Erro Geral: Arquivo de configuração não encontrado em : C:\Users\1dev46bt1\Documents\AnaUribe\BackEnd\PHPVanilla\8-PersistenciaComBD\SAformativa/config/databs.ini
+[2026-09-25 19:55:35] ERRO: Erro no banco de dados: SQLSTATE[08006] [7] connection to server at "127.0.0.1", port 5432 failed: fe_sendauth: no password supplied
+[2026-09-25 19:57:53] ERRO: Erro no banco de dados: SQLSTATE[08006] [7] connection to server at "127.0.0.1", port 5431 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?

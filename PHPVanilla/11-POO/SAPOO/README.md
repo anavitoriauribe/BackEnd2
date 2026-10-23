@@ -17,3 +17,16 @@ SAPOO/
 ├── app_banco.php                               <- Simulador visual de operações bancárias
 └── README.md                                   <- Documentação e testes
 ```
+
+
+## Etapas do Desenvolvimento
+
+### Modelagem Ralacional e Script DDL (`schema.sql`)
+
+Criar o Banco de Dados e Executar o Script SQL para Criação das Tabelas
+
+### Configuração do Autoload PSR-4 (`composer.json`)
+
+Criar o arquivo `composer.json` na raiz do projeto
+
+

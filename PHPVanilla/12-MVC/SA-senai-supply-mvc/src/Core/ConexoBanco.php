@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+
 //Criar a Classe responsável por fornecer uma instancia única de conexão usando PDO com o Banco de Dados (Singleton)
 
 final class ConexaoBanco{

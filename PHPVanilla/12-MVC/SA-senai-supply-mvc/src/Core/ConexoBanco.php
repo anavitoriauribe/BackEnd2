@@ -2,7 +2,11 @@
 declare(strict_types=1);
 
 
+namespace App\Core;
 //Criar a Classe responsável por fornecer uma instancia única de conexão usando PDO com o Banco de Dados (Singleton)
+
+use PDO;
+
 
 final class ConexaoBanco{
     //atributos => são as caracteristicas do objeto
@@ -43,7 +47,6 @@ final class ConexaoBanco{
     //Criar a instancia nativa do PDO aplicando as flags de Segurança do PDO
     private static function estabelecerConexao(array $cfg): PDO{
         $dsn = sprintf(
-            //"pgsql:host=127.0.0.1;port=5432;dbname=escola_biblioteca"
             "%s:host=%s;port=%s;dbname=%s",
             $cfg["db_driver"],
             $cfg["db_host"],

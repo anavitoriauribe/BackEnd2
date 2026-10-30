@@ -1,7 +1,15 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Models;
+
+use App\Core\ConexaoBanco;
 use PDO;
+use App\Core\Logger;
+use Throwable;
+use DomainException;
+
+
 
 final class Movimentacao {
     //criar o PDO
@@ -66,15 +74,16 @@ final class Movimentacao {
             ':qtd'    => $qtd,
             ':motivo' => trim($motivo)
         ]);
-
-        //chamar o registro da auditoria
-         Logger::info("Movimentação de estoque", [
+        //chamar o registro da auditoria de log
+        Logger::info(
+            "Movimentação de estoque",[   
                 "produto_id"=> $prodId, 
                 "usuario_id"=> $userId,
                 "tipo" => $tipo,
                 "quantidade" => $qtd,
-                "motivo"=> $motivo]);
-
+                "motivo"=> $motivo]
+        );
+    }
 
     //listar todas as movimentações
     public static function listarHistorico(int $limite = 20): array {

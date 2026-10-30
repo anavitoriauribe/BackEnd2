@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Core;
+
 final class Roteador {
     //Roteador HTTP com suporte a depacho de rotas e Guards de Segurança
     private array $rotas = [];
@@ -32,7 +34,7 @@ final class Roteador {
     }
 
     //Executa o guard para a rota
-        private function executarGuards(array $guards): void {
+    private function executarGuards(array $guards): void {
         foreach ($guards as $guard) {
             [$classeGuard, $argumentos] = $guard;
             $classeGuard::proteger($argumentos ?? []);
@@ -40,7 +42,7 @@ final class Roteador {
     }
 
     //Rota não Encontrada
-     private function responderNaoEncontrado(): void {
+    private function responderNaoEncontrado(): void {
         http_response_code(404);
         echo "<h1 style='font-family:sans-serif;text-align:center;margin-top:50px;'>404 — Rota Nao Encontrada</h1>";
         echo "<p style='font-family:sans-serif;text-align:center;'><a href='/'>Voltar para o Inicio</a></p>";

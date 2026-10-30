@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
 
+namespace App\Models;
+
+use App\Core\ConexaoBanco;
+
 use PDO; //importação da biblioteca do PDO
 
 final class Usuario{
@@ -12,10 +16,9 @@ final class Usuario{
         return ConexaoBanco::obterConexao($cfg); //estabelece a conexão com o banco
     }
 
-    //método para localizar usuário por email 
+    //método para loclaizar usuário por email 
     public static function buscarPorEmail(string $email): ?array {
         //? pode ou não retornar os dados de um usuário
-        
         $sql = "SELECT id, nome, email, senha_hash, perfil FROM usuarios WHERE email = :email LIMIT 1";
         $stmt = self::pdo()->prepare($sql);
         $stmt->execute([':email' => trim($email)]);
@@ -23,7 +26,6 @@ final class Usuario{
         return $resultado ?: null;
     }
 
-    
     //método para consultar por id
     public static function buscarPorId(int $id): ?array {
         $sql = "SELECT id, nome, email, perfil FROM usuarios WHERE id = :id LIMIT 1";
@@ -31,6 +33,5 @@ final class Usuario{
         $stmt->execute([':id' => $id]);
         $resultado = $stmt->fetch();
         return $resultado ?: null;
-
-}
+    }
 }

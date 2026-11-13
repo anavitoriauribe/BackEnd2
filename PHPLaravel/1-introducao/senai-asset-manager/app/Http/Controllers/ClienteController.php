@@ -15,7 +15,7 @@ class ClienteController extends Controller
     public function index(): View
     {
         return view("clientes.index", [
-            "clintes" => Cliente::all(), //busca todos os clientes do banco
+            "clientes" => Cliente::all(), //busca todos os clientes do banco
             "titulo" => "Parceiros e Clientes Industriais"
         ]);
     }
@@ -37,13 +37,13 @@ class ClienteController extends Controller
     {
         $dados = $request->validate([
             "razao_social" => "required | min:3",
-            "cnpj"         => "required | unique:cliente,cnpj", //
+            "cnpj"         => "required | unique:clientes,cnpj", //
             "setor"        => "required"
             ]);
    
         //fazer o cadastro no banco
         Cliente::create($dados);
-        return redirect()->route("clientes.indes")->with("sucesso", "cliente cadastrado com sucesso"); 
+        return redirect()->route("clientes.index")->with("sucesso", "cliente cadastrado com sucesso"); 
     }
 
 

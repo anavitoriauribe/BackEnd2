@@ -159,6 +159,8 @@ Execute a sequência de 7 testes de validação técnica no laboratório:
 Criar o arquivo de migração e o model com o comando
 `php artisan make:model Cliente -m`
 
+obs: ao usar a flag -m o Laravel cria 2 arquivos, o Model e o Migration
+
 - Um arquivo no `database/migration` -> inserir a tabela no banco
 - Um arquivo no `app/Model` - gerenciador do modelo de relacional
 
@@ -171,6 +173,26 @@ Executar o comando
 
 `php artisan make:controller Cliente Controller --resource`
 
-- m arquivo é criado em `app/http/controllers/ClienteController.php`
+>obs: ao usarflag --resource são criados 7 métodos automaticamente dentro do controller
+
+- um arquivo é criado em `app/http/controllers/ClienteController.php`
 
 contendo os 7 métodos de assinatura de resource
+
+## Criar as rotas Nomeadas para os Controllers dentro do Arquivo (`routes/web.php`)
+
+Depois de criar o Model, executar a migração e implementar o controller, vamos declarar as rotas do módulo em `routes/web.php`
+
+Uso do elemento Resource para gerar todas as rotas do controller
+
+`Route::resource()` => gera todas as rotas do controller
+
+## Contrução das Views Blade
+
+Criar o diretório `resources/views/clientes`=>
+criar os arquivos dentro da platas `/clientes`
+
+index.blade.php
+show.blade.php
+create.blade.php
+edit.blade.php
